@@ -1,0 +1,6 @@
+speed =0.2
+
+s0.initVideo("https://assets.mixkit.co/videos/18309/18309-720.mp4")
+s1.initVideo("https://assets.mixkit.co/videos/4205/4205-720.mp4")
+src(s1).modulateScale(osc(3)).out(o1)
+src(s0).scale(.9).modulate(noise(1).diff(src(s1))).modulateKaleid(noise(.002,.06500,10), [2,1.5,3,0.9], .3).modulateScale(osc(.02, 2, .3)).scale(.7).out(o0)
